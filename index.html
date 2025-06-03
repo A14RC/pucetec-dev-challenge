@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PUCETEC Dev Challenge</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>PUCETEC Dev Challenge</h1>
+  </header>
+
+  <section id="presentacion">
+  <h2>¿Qué es el Dev Challenge?</h2>
+  <p>
+    El "DEV CHALLENGE" de PUCE TEC es un evento anual, que busca destacar la creatividad y habilidades 
+    de los estudiantes en tecnología y desarrollo de software. Este evento, que se considera insignia en el ámbito de la tecnología de la PUCE TEC, 
+    se enfoca en premiar y reconocer los mejores proyectos desarrollados por los estudiantes.
+  </p>
+
+  <button id="temaBtn">Cambiar Tema</button>
+</section>
+
+  <main>
+    <section id="formulario">
+      <h2>Registro de participantes</h2>
+      <form id="registroForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+        
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required />
+        
+        <label for="carrera">Carrera:</label>
+        <input type="text" id="carrera" name="carrera" required />
+        
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section id="ediciones">
+      <h2>Ediciones anteriores</h2>
+      <ul>
+        <li><strong>Innovation Challenge PUCE-Icam (2022)</strong></li>
+        <p>Este concurso intercolegial buscaba proyectos innovadores, ofreciendo incentivos económicos y descuentos en la matrícula de la Facultad de Innovación.</p>
+        <p><strong>Otros Eventos:</strong> La PUCE organiza diversos eventos académicos y de innovación a lo largo del año, con el objetivo de promover la participación de estudiantes y la investigación.</p>
+      </ul>
+    </section>
+
+    <!-- Coloca esto dentro de <main> o donde quieras que aparezcan los participantes -->
+    <section id="participantes">
+        <h2>Participantes anteriores</h2>
+        <div id="lista-participantes"></div>
+    </section>
+    
+   
+  </main>
+
+  <footer>
+    <p>Síguenos en nuestras redes:</p>
+    <a href="https://x.com/PUCE_Ecuador" target="_blank">Twitter</a> |
+    <a href="https://www.facebook.com/pontificiauniversidadcatolicadelecuador" target="_blank">Facebook</a> |
+    <a href="https://www.instagram.com/puce_ecuador/" target="_blank">Instagram</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

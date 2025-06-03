@@ -1,0 +1,439 @@
+/* =========================
+   Tipografía y paleta de colores
+   ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700;800&display=swap');
+
+:root {
+  --neutral-0: hsl(0, 0%, 100%);
+  --neutral-300: hsl(252, 6%, 83%);
+  --neutral-500: hsl(245, 15%, 58%);
+  --neutral-700: hsl(245, 19%, 35%);
+  --neutral-900: hsl(248, 70%, 10%);
+  --orange-500: hsl(7, 88%, 67%);
+  --orange-700: hsl(7, 71%, 60%);
+  --fuente: 'Inconsolata', monospace;
+}
+
+/* =========================
+   Reset y base
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente);
+  background: linear-gradient(135deg, var(--neutral-900) 70%, var(--orange-700) 100%);
+  color: var(--neutral-0);
+  min-height: 100vh;
+  padding: 32px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* Centra horizontalmente */
+  justify-content: center;  /* Centra verticalmente */
+}
+
+/* =========================
+   Header y botón de tema
+   ========================= */
+header {
+  text-align: center;
+  margin-bottom: 32px;
+  background: var(--orange-500);
+  color: var(--neutral-0);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px var(--orange-700);
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto 32px auto;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 16px var(--orange-700);
+}
+
+#temaBtn {
+  margin-top: 1rem;
+  padding: 0.9rem 2rem;
+  background-color: var(--orange-500);      /* Fondo naranja para destacar */
+  color: var(--neutral-0);                  /* Texto blanco */
+  border: 2px solid var(--orange-700);      /* Borde naranja oscuro */
+  border-radius: 8px;                       /* Bordes redondeados */
+  cursor: pointer;
+  font-family: var(--fuente);
+  font-weight: 700;
+  font-size: 1.1rem;                        /* Texto más grande */
+  box-shadow: 0 2px 8px var(--orange-700);  /* Sombra para resaltar */
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s, border 0.3s;
+  outline: none;
+  display: inline-block;
+}
+
+#temaBtn:hover {
+  background-color: var(--orange-700);      /* Más oscuro al pasar el mouse */
+  color: var(--neutral-0);
+  border: 2px solid var(--neutral-0);       /* Borde blanco al hacer hover */
+  box-shadow: 0 4px 16px var(--orange-700);
+}
+
+/* =========================
+   Presentación principal
+   ========================= */
+#presentacion {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: var(--neutral-700);
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 2px 12px var(--orange-700);
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#presentacion h2 {
+  margin-bottom: 1.2rem;
+  color: var(--orange-500);
+  letter-spacing: 2px;
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 0 2px 16px var(--orange-700);
+}
+
+#presentacion p {
+  color: var(--neutral-0);
+  font-size: 1.15rem;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* =========================
+   Formulario de registro
+   ========================= */
+#formulario {
+  margin-bottom: 2rem;
+  background: var(--neutral-700);
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 2px 12px var(--orange-700);
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#formulario h2 {
+  margin-bottom: 1.2rem;
+  color: var(--orange-500);
+  letter-spacing: 1px;
+}
+
+#registroForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+label {
+  font-size: 1rem;
+  color: var(--neutral-300);
+  margin-bottom: 4px;
+}
+
+input, select, textarea, button[type="submit"] {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 7px;
+  border: none;
+  background: var(--neutral-900);
+  color: var(--neutral-0);
+  transition: border 0.2s;
+  margin-bottom: 8px;
+  font-family: var(--fuente);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border: 2px solid var(--orange-500);
+}
+
+button[type="submit"] {
+  background-color: var(--orange-500);
+  color: var(--neutral-0);
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 8px var(--orange-700);
+}
+
+button[type="submit"]:hover {
+  background-color: var(--orange-700);
+  box-shadow: 0 4px 16px var(--orange-700);
+}
+
+/* =========================
+   Ediciones anteriores
+   ========================= */
+#ediciones {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: var(--neutral-700);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 12px var(--orange-700);
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#ediciones h2 {
+  margin-bottom: 1.2rem;
+  color: var(--orange-500);
+  letter-spacing: 1px;
+}
+
+#ediciones ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+#ediciones ul li {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--orange-500);
+  font-size: 1.1rem;
+  color: var(--neutral-0);
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+#ediciones ul li:last-child {
+  border-bottom: none;
+}
+
+/* =========================
+   Participantes anteriores
+   ========================= */
+#participantes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 700px;
+}
+
+#participantes h2 {
+  margin-bottom: 1.2rem;
+  color: var(--orange-500);
+  letter-spacing: 1px;
+}
+
+#lista-participantes {
+  width: 100%;
+}
+
+#lista-participantes > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  justify-content: center;
+}
+
+#lista-participantes img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid var(--orange-500);
+}
+
+#lista-participantes span {
+  font-weight: bold;
+  color: var(--neutral-0);
+}
+
+/* =========================
+   Footer
+   ========================= */
+footer {
+  text-align: center;
+  margin-top: 48px;
+  font-size: 0.9rem;
+  color: var(--neutral-300);
+  letter-spacing: 1px;
+  background: var(--orange-500);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px var(--orange-700);
+}
+
+footer a {
+  color: var(--neutral-0);
+  margin: 0 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: var(--orange-700);
+  text-shadow: 0 0 5px var(--orange-700);
+}
+
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width: 600px) {
+  main, #presentacion, #formulario, #ediciones, #participantes {
+    padding: 1rem 0.5rem;
+    max-width: 98vw;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+}
+
+/* =========================
+   Modo claro (body.oscuro)
+   ========================= */
+body.oscuro {
+  background: linear-gradient(135deg, var(--neutral-0) 70%, var(--neutral-300) 100%);
+  color: var(--neutral-900);
+}
+
+body.oscuro header {
+  background: var(--orange-500);
+  color: var(--neutral-0);
+  box-shadow: 0 2px 16px var(--orange-700);
+}
+
+body.oscuro header h1 {
+  color: var(--neutral-0);
+  text-shadow: 0 2px 16px var(--orange-700);
+}
+
+body.oscuro main {
+  background: transparent;
+  color: var(--neutral-900);
+}
+
+body.oscuro #temaBtn {
+  background-color: var(--neutral-300);
+  color: var(--neutral-900);
+}
+
+body.oscuro #temaBtn:hover {
+  background-color: var(--orange-700);
+  color: var(--neutral-0);
+}
+
+/* Presentación en modo claro */
+body.oscuro #presentacion {
+  background: var(--neutral-300);
+  box-shadow: 0 2px 12px var(--orange-500);
+}
+
+body.oscuro #presentacion h2 {
+  color: var(--orange-700);
+  text-shadow: 0 2px 16px var(--orange-500);
+}
+
+body.oscuro #presentacion p {
+  color: var(--neutral-900);
+}
+
+/* Formulario en modo claro */
+body.oscuro #formulario {
+  background: var(--neutral-300);
+  box-shadow: 0 2px 12px var(--orange-500);
+}
+
+body.oscuro label {
+  color: var(--neutral-700);
+}
+
+body.oscuro input,
+body.oscuro select,
+body.oscuro textarea {
+  background: var(--neutral-0);
+  color: var(--neutral-900);
+  border: 1px solid var(--neutral-500);
+}
+
+body.oscuro input:focus,
+body.oscuro select:focus,
+body.oscuro textarea:focus {
+  border: 2px solid var(--orange-500);
+}
+
+body.oscuro button,
+body.oscuro button[type="submit"] {
+  background-color: var(--orange-500);
+  color: var(--neutral-0);
+  box-shadow: 0 2px 8px var(--orange-700);
+}
+
+body.oscuro button:hover,
+body.oscuro button[type="submit"]:hover {
+  background-color: var(--orange-700);
+  color: var(--neutral-0);
+}
+
+/* Ediciones anteriores en modo claro */
+body.oscuro #ediciones {
+  background: var(--neutral-300);
+  box-shadow: 0 2px 12px var(--orange-500);
+}
+
+body.oscuro #ediciones h2 {
+  color: var(--orange-700);
+}
+
+body.oscuro #ediciones ul li {
+  color: var(--neutral-900);
+  border-bottom: 1px solid var(--orange-700);
+}
+
+/* Participantes anteriores en modo claro */
+body.oscuro #participantes {
+  background: transparent;
+}
+
+body.oscuro #lista-participantes span {
+  color: var(--neutral-900);
+}
+
+body.oscuro #lista-participantes img {
+  border: 2px solid var(--orange-700);
+}
+
+/* Footer en modo claro */
+body.oscuro footer {
+  background: var(--orange-500);
+  color: var(--neutral-0);
+  box-shadow: 0 2px 16px var(--orange-700);
+}
+
+body.oscuro footer a {
+  color: var(--neutral-0);
+}
+
+body.oscuro footer a:hover {
+  color: var(--orange-700);
+}
